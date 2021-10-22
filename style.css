@@ -1,0 +1,136 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: violet;
+    height: 3rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-family: 'Scheherazade New', serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+
+.gamecontainer{
+/* background-color: rgb(213, 247, 243); */
+display: flex;
+justify-content: center;
+margin-top: 1rem;
+
+}
+
+.container{
+display: grid;
+grid-template-rows: repeat(3,13vw);
+grid-template-columns: repeat(3,13vw);
+background-color: rgb(248, 189, 146);
+border-radius: 30%;
+position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(253, 208, 175);
+    border-radius: 30%;
+}
+
+.gameinfo{
+    /* padding: 3rem; */
+    margin-left: 3rem;
+}
+
+.gameinfo h1{
+    /* padding: 3rem; */
+    margin-bottom: 3rem;
+}
+
+.imgbox img{
+    /* display: none; */
+    width: 0;
+    transition: width 1s ease-in-out;
+    border-radius: 50%;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 1rem 3rem;
+    padding: .4rem;
+    border-radius: .6rem;
+    background-color: rgb(120, 120, 252);
+    /* color: white; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#reset:hover{
+    background-color: rgb(9, 9, 253);
+    color: white;
+}
+
+.info{
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+}
+
+.line{
+    background-color: black;
+    height: 2px;
+    width: 0vw;
+    transition: width 1s ease-in-out;
+    position: absolute;
+    left: 0;
+    color: red;
+    background-color: red;
+}
+
+@media screen and (max-width: 900px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .container{
+        margin-bottom: 3rem;
+        grid-template-rows: repeat(3,18vw);
+grid-template-columns: repeat(3,18vw);
+    }
+    .gameinfo h1{
+        display: none;
+    }
+
+}
+
